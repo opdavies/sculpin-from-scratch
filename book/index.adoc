@@ -1,6 +1,6 @@
 [separator=::]
 = Sculpin from Scratch
-:author: Oliver Davies
+:author: Oliver Davies (opdavies)
 :copyright: 2025 {author}
 :creator: {author}
 :description: Build fast and secure static websites with Sculpin, a PHP-based static site generator.
