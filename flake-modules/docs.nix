@@ -2,7 +2,7 @@
   perSystem =
     { pkgs, ... }:
     {
-      devshells.docs.packages =
+      devshells.book.packages =
         with pkgs;
         let
           inherit (pkgs) writeShellApplication;
