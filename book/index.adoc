@@ -23,13 +23,13 @@
 :toclevels: 2
 :xrefstyle: short
 
-include::./_links.adoc[]
+include::_links.adoc[]
 
 :toc:
 
-include::./intro/copyright.adoc[]
+include::intro/copyright.adoc[]
 
-include::./intro/prerequisites.adoc[]
+include::intro/prerequisites.adoc[]
 
 = Why a static website?
 
@@ -53,9 +53,9 @@ __In development...__
 
 __In development...__
 
-include::./new-project/installing.adoc[]
+include::new-project/installing.adoc[]
 
-include::./new-project/first-build.adoc[]
+include::new-project/first-build.adoc[]
 
 = Building your first page
 
