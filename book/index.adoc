@@ -23,6 +23,8 @@
 :toclevels: 2
 :xrefstyle: short
 
+include::./_links.adoc[]
+
 :toc:
 
 include::./intro/copyright.adoc[]
