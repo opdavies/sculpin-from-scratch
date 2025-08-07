@@ -1,0 +1,70 @@
+[separator=::]
+= Sculpin from Scratch
+:author: Oliver Davies (opdavies)
+:copyright: 2025 {author}
+:creator: {author}
+:description: Build fast and secure static websites with Sculpin, a PHP-based static site generator.
+:doctype: book
+:email: oliver@oliverdavies.uk
+// :front-cover-image: image:cover.png[width=1024,height=1024]
+:icons: font
+:keywords: php software-development
+:leveloffset: +1
+:pygments-linenums-mode: table
+:pygments-style: vs
+:revdate: {date}
+:revnumber: v0.0.1
+:revremark: Under development
+:sectlinks:
+:sectnums!:
+:source-highlighter: pygments
+:toc-title: Table of Contents
+:toc: left
+:toclevels: 2
+:xrefstyle: short
+
+:toc:
+
+= Prerequisites
+
+= Why a static website?
+
+= Why Sculpin?
+
+= Creating a new Sculpin project
+
+= Building your first page
+
+Under development...
+
+= Layouts
+
+Under development...
+
+= Output directories
+
+Under development...
+
+= Deploying the files
+
+Under development...
+
+= Content types
+
+Under development...
+
+= Site variables
+
+Under development...
+
+= Page variables
+
+Under development...
+
+= Writing custom services
+
+Under development...
+
+== Testing with PHPUnit
+
+Under development...
