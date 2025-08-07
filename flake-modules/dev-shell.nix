@@ -7,7 +7,12 @@
     { pkgs, ... }:
     {
       devshells.default.packages = with pkgs; [
-        php
+        (php.buildEnv {
+          extraConfig = ''
+            error_reporting = E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED
+          '';
+        })
+
         phpPackages.composer
       ];
     };
