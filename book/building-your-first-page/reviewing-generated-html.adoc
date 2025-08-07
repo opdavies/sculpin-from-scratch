@@ -1,0 +1,38 @@
+= Reviewing index.html
+
+If you look at the `index.html` file, you should see this:
+
+[source,html]
+----
+<p>Hello, World!</p>
+----
+
+The `Hello, World!` text has been parsed as Markdown and converted to HTML.
+
+The same would happen for any Markdown text.
+
+If, for example, the string changed to `# Hello, World!`, the HTML would change to be a level 1 heading.
+
+== Where we are
+
+This is what your project should now look like:
+
+----
+.
+├── composer.json
+├── composer.lock
+├── output_dev
+│   └── index.html
+├── source
+│   └── index.md
+└── vendor
+----
+
+You have a `source` directory for your source files and an `{sculpin_output_dir}` directory for the generated static files.
+
+When you run `{sculpin_generate}`, any source files will be converted to HTML and placed in the output directory.
+
+[NOTE]
+====
+To avoid committing the generated HTML files, add `output_*` to your `.gitignore` file.
+====

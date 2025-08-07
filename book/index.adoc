@@ -61,6 +61,9 @@ include::installation/installing-sculpin.adoc[]
 
 include::your-first-build.adoc[]
 
+include::building-your-first-page/content.adoc[]
+include::building-your-first-page/reviewing-generated-html.adoc[]
+
 = Layouts
 
 __Under development...__

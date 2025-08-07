@@ -1,0 +1,41 @@
+= Building your first page
+
+To generate a site, you'll need to create some source files.
+
+In the `source` directory, create an `index.md` file with this content:
+
+[source,markdown]
+----
+include::index.md[]
+----
+
+This is a {link_markdown} file that will be converted into an `index.html` file.
+
+The two lines containing three dashes are the front matter section that stores the metadata of the page (we'll look more into this later).
+
+The text outside of the front matter will be converted from Markdown to HTML.
+
+Run `{sculpin_generate}` again to generate the website.
+
+This time, you should see output like this:
+
+----
+Detected new or updated files
+Generating: 100% (1 sources / 0.00 seconds)
+Converting: 100% (1 sources / 0.02 seconds)
+Formatting: 100% (1 sources / 0.00 seconds)
+Processing completed in 0.03 seconds
+----
+
+__The build was successful!__
+
+You should have a new directory (`{sculpin_output_dir}`) containing an `index.html` file.
+
+[NOTE]
+====
+Depending on your PHP version, you may see deprecation errors when running `{sculpin_generate}`.
+
+To hide them, add this to your `php.ini` file:
+
+`error_reporting = E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED`
+====
