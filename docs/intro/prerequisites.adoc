@@ -1,0 +1,12 @@
+[prerequisites]
+= Prerequisites
+
+In this book, we'll be using https://sculpin.io[Sculpin] - a static site generator written in PHP.
+
+Whilst you don't need to write any PHP to use it, you need to have it installed.
+
+Run `php -v` in a Terminal to see if you have it installed and, if so, what version.
+
+You'll also need https://getcomposer.org[Composer] - PHP's package manager - to download and install packages (including Sculpin itself).
+
+Once we have it installed, we'll be using HTML, https://twig.symfony.com[Twig] and https://www.markdownguide.org[Markdown] to build pages.

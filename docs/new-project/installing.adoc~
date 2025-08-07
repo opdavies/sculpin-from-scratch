@@ -1,0 +1,73 @@
+= Creating a new Sculpin project
+
+// TODO: skeletons
+
+== Creating composer.json
+
+In an empty directory, run `composer init` to generate a composer.json file.
+
+This will start the Composer config generator, which will ask questions and generate the file accordingly.
+
+This is what I entered, and you can see a preview of the generated file:
+
+----
+include::./init.txt[]
+----
+
+== Installing Sculpin
+
+If you didn't define your dependencies interactively, you will need to add Sculpin to your project.
+
+To do this, run `composer require sculpin/sculpin`.
+
+You will start to see output like this as Composer finds Sculpin's dependencies, determines the compatible versions, and starts to download them:
+
+----
+./composer.json has been updated
+Running composer update sculpin/sculpin
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 50 installs, 0 updates, 0 removals
+  - Locking dflydev/ant-path-matcher (v1.0.4)
+  - Locking dflydev/apache-mime-types (v1.0.1)
+  - Locking dflydev/canal (v1.0.0)
+----
+
+You may also get asked this question:
+
+----
+Do you trust "sculpin/sculpin-theme-composer-plugin" to execute code and wish to enable it now? (writes "allow-plugins" to composer.json) [y,n,d,?]
+----
+
+I allowed it, but don't usually use it.
+
+Finally, you'll see this line that shows the Sculpin version number and confirms it has been installed.
+
+----
+Using version ^3.2 for sculpin/sculpin
+----
+
+----
+ > tree vendor -L 1 vendor/bin
+
+vendor
+├── autoload.php
+├── bin
+├── composer
+├── dflydev
+├── doctrine
+├── evenement
+├── fig
+├── michelf
+├── netcarver
+├── psr
+├── react
+├── sculpin
+├── symfony
+├── twig
+└── webignition
+vendor/bin
+├── sculpin
+├── sculpin.php
+└── var-dump-server
+----

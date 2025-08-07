@@ -25,48 +25,110 @@
 
 :toc:
 
-include::./copyright.adoc[]
+include::./intro/copyright.adoc[]
 
-= Prerequisites
+include::./intro/prerequisites.adoc[]
 
 = Why a static website?
 
+== Security
+
+__In development...__
+
+== Performance
+
+__In development...__
+
+== Easy to deploy
+
+__In development...__
+
+== Rapid development
+
+__In development...__
+
 = Why Sculpin?
 
-= Creating a new Sculpin project
+__In development...__
+
+include::./new-project/installing.adoc[]
+
+= The first build
+
+With Sculpin installed, run `vendor/bin/sculpin generate` to generate the website.
+
+----
+The "/home/opdavies/Code/code.oliverdavies.uk/opdavies/sculpin-from-scratch/source" directory does not exist.
+----
+
+The `source` directory contains your source files - e.g. your HTML, Twig and Markdown files.
+
+Without it, Sculpin cannot generate a website.
+
+To fix this, create an empty directory by running `mkdir source` and run `vendor/bin/sculpin generate` again.
+
+You will see this message in your output, but you can ignore it:
+
+----
+Didn't find at least one of this type : posts
+----
+
+We will cover content types in another chapter.
+
+////
+[NOTE]
+====
+Simplify the command by adding `vendor/bin` to your path.
+
+Then, you can just run `sculpin generate`.
+====
+////
+
+== Where we are
+
+----
+.
+├── app
+│   └── config
+│       └── sculpin_kernel.yml
+├── composer.json
+├── composer.lock
+├── source
+└── vendor
+----
 
 = Building your first page
 
-Under development...
+__Under development...__
 
 = Layouts
 
-Under development...
+__Under development...__
 
 = Output directories
 
-Under development...
+__Under development...__
 
 = Deploying the files
 
-Under development...
+__Under development...__
 
 = Content types
 
-Under development...
+__Under development...__
 
 = Site variables
 
-Under development...
+__Under development...__
 
 = Page variables
 
-Under development...
+__Under development...__
 
 = Writing custom services
 
-Under development...
+__Under development...__
 
 == Testing with PHPUnit
 
-Under development...
+__Under development...__

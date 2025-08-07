@@ -1,0 +1,11 @@
+{
+    "name": "opdavies/sculpin-from-scratch",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Oliver Davies",
+            "email": "oliver@oliverdavies.uk"
+        }
+    ],
+    "require": {}
+}
