@@ -1,18 +1,20 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs = {
+    devshell.inputs.nixpkgs.follows = "nixpkgs";
+    devshell.url = "github:numtide/devshell";
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    import-tree.url = "github:vic/import-tree";
+
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  };
 
   outputs =
     inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import inputs.nixpkgs { inherit system; };
-    in
-    {
-      devShells.${system}.default = {
-        packages = with pkgs; [
-          php
-          phpPackages.composer
-        ];
-      };
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        (inputs.import-tree ./flake-modules)
+      ];
     };
 }
