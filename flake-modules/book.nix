@@ -2,40 +2,49 @@
   perSystem =
     { pkgs, ... }:
     {
-      devshells.book.packages =
-        with pkgs;
-        let
-          inherit (pkgs) writeShellApplication;
-        in
-        [
+      devshells.book = {
+        packages = with pkgs; [
           asciidoctor-with-extensions
+          coreutils
+        ];
 
-          (writeShellApplication {
-            name = "build";
+        commands = [
+          {
+            name = "create-book-all";
+            command = ''
+              create-book-html
+              create-book-pdf
+              create-book-epub
+            '';
+          }
 
-            runtimeInputs = [
-              pkgs.coreutils
-            ];
+          {
+            name = "create-book-epub";
+            command = ''
+              asciidoctor-epub3 \
+                -a date="$(date +'%Y-%m-%d %H:%M')" index.adoc \
+                  --out-file build/sculpin-from-scratch.epub
+            '';
+          }
 
-            text = ''
+          {
+            name = "create-book-html";
+            command = ''
+              asciidoctor \
+                -a date="$(date +'%Y-%m-%d %H:%M')" index.adoc \
+                  --out-file build/sculpin-from-scratch.html
+            '';
+          }
+
+          {
+            name = "create-book-pdf";
+            command = ''
               asciidoctor-pdf \
                 -a date="$(date +'%Y-%m-%d %H:%M')" index.adoc \
-                  --out-file sculpin-from-scratch.pdf
+                  --out-file build/sculpin-from-scratch.pdf
             '';
-          })
-
-          (writeShellApplication {
-            name = "watch";
-
-            runtimeInputs = with pkgs; [
-              coreutils
-              entr
-            ];
-
-            text = ''
-              find . -type f -name "*.adoc" | entr build
-            '';
-          })
+          }
         ];
+      };
     };
 }

@@ -1,1 +1,9 @@
 nix develop .#book
+nix develop .#book -c $SHELL
+
+create-book-all
+create-book-epub
+create-book-html
+create-book-pdf
+
+find . -type f ! -path "build/*" | entr create-book-html
