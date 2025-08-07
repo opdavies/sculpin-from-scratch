@@ -1,0 +1,23 @@
+@default:
+    just --list
+
+all: epub html pdf
+
+clean:
+    rm -fr build
+    mkdir build
+
+epub:
+    asciidoctor-epub3 \
+      -a date="$(date +'%Y-%m-%d %H:%M')" index.adoc \
+        --out-file build/sculpin-from-scratch.epub
+
+html:
+    asciidoctor \
+      -a date="$(date +'%Y-%m-%d %H:%M')" index.adoc \
+        --out-file build/sculpin-from-scratch.html
+
+pdf:
+    asciidoctor-pdf \
+      -a date="$(date +'%Y-%m-%d %H:%M')" index.adoc \
+        --out-file build/sculpin-from-scratch.pdf
