@@ -7,5 +7,12 @@
             "email": "oliver@oliverdavies.uk"
         }
     ],
-    "require": {}
+    "require": {
+        "sculpin/sculpin": "^3.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "sculpin/sculpin-theme-composer-plugin": true
+        }
+    }
 }
