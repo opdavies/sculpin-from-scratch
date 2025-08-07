@@ -24,6 +24,7 @@
 :xrefstyle: short
 
 :sculpin_generate: vendor/bin/sculpin generate
+:sculpin_output_dir: output_dev
 
 include::_links.adoc[]
 
