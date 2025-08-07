@@ -1,0 +1,46 @@
+= Your first build
+
+With Sculpin installed, run `{sculpin_generate}` to generate the website.
+
+----
+The "/home/opdavies/Code/code.oliverdavies.uk/opdavies/sculpin-from-scratch/source" directory does not exist.
+----
+
+The `source` directory contains your source files - e.g. your HTML, Twig and Markdown files.
+
+Without it, Sculpin cannot generate a website.
+
+To fix this, create an empty directory by running `mkdir source` and run `{sculpin_generate}` again.
+
+You will see this message in your output, but you can ignore it:
+
+----
+Didn't find at least one of this type : posts
+----
+
+We will cover content types in another chapter.
+
+////
+[NOTE]
+====
+Simplify the command by adding `vendor/bin` to your path.
+
+Then, you can just run `sculpin generate`.
+====
+////
+
+== Where we are
+
+This is what your project should now look like:
+
+----
+.
+├── composer.json
+├── composer.lock
+├── source
+└── vendor
+----
+
+This will build, but as you haven't added any source files, nothing will be generated.
+
+Let's create your first page in the next chapter.

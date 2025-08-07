@@ -23,6 +23,8 @@
 :toclevels: 2
 :xrefstyle: short
 
+:sculpin_generate: vendor/bin/sculpin generate
+
 include::_links.adoc[]
 
 :toc:
@@ -53,13 +55,11 @@ __In development...__
 
 __In development...__
 
-include::new-project/installing.adoc[]
+include::installation/creating-composer-json.adoc[]
 
-include::new-project/first-build.adoc[]
+include::installation/installing-sculpin.adoc[]
 
-= Building your first page
-
-__Under development...__
+include::your-first-build.adoc[]
 
 = Layouts
 

@@ -1,0 +1,11 @@
+== Creating composer.json
+
+In an empty directory, run `composer init` to generate a composer.json file.
+
+This will start the Composer config generator, which will ask questions and generate the file accordingly.
+
+This is what I entered, and you can see a preview of the generated file:
+
+----
+include::./init.txt[]
+----
