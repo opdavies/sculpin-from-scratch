@@ -65,6 +65,8 @@ include::your-first-build.adoc[]
 include::building-your-first-page/content.adoc[]
 include::building-your-first-page/reviewing-generated-html.adoc[]
 
+include::page-variables-and-twig/content.adoc[]
+
 = Layouts
 
 __Under development...__
@@ -82,10 +84,6 @@ __Under development...__
 __Under development...__
 
 = Site variables
-
-__Under development...__
-
-= Page variables
 
 __Under development...__
 
